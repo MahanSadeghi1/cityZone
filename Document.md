@@ -101,52 +101,6 @@ GET https://api.cityzone.ir/getdata/v1/provinces/cities/:provinceId
 
 -   `provinceId` (عدد): شناسه استان
 
-## نکات مهم
-
--   تمام درخواست‌ها باید حاوی هدر `x-api-key` باشند
--   پاسخ‌های موفق همیشه حاوی کلید data هستند
--   پاسخ‌های خطا حاوی کد وضعیت و پیغام خطای مربوطه هستند
--   مختصات جغرافیایی به صورت `[longitude, latitude]` ارسال می‌شوند
-
-## مثال‌های پاسخ
-
-<details>
-<summary>مثال پاسخ دریافت محله‌ها</summary>
-
-```json
-{
-    "status": 1,
-    "data": {
-        "name": "اصفهان",
-        "districts": [
-            {
-                "name": "اتوبان بندرگز",
-                "type": "district",
-                "geo_center": [53.982132, 36.761244]
-            }
-        ]
-    }
-}
-```
-
-</details>
-
-<details>
-<summary>مثال پاسخ دریافت استان‌ها</summary>
-
-```json
-{
-    "status": 1,
-    "data": {
-        "name": "مازندران",
-        "cities": [
-            { "name": "آمل", "type": "city" },
-            { "name": "بابل", "type": "city" }
-        ]
-    }
-}
-```
-
 ### 7. دریافت اطلاعات IP
 
 ```http
@@ -235,3 +189,49 @@ GET https://api.cityzone.ir/getdata/v1/ipinfo
 -   شناسایی خودکار نوع IP
 </details>
 </details>
+
+## نکات مهم
+
+-   تمام درخواست‌ها باید حاوی هدر `x-api-key` باشند
+-   پاسخ‌های موفق همیشه حاوی کلید data هستند
+-   پاسخ‌های خطا حاوی کد وضعیت و پیغام خطای مربوطه هستند
+-   مختصات جغرافیایی به صورت `[longitude, latitude]` ارسال می‌شوند
+
+## مثال‌های پاسخ
+
+<details>
+<summary>مثال پاسخ دریافت محله‌ها</summary>
+
+```json
+{
+    "status": 1,
+    "data": {
+        "name": "اصفهان",
+        "districts": [
+            {
+                "name": "اتوبان بندرگز",
+                "type": "district",
+                "geo_center": [53.982132, 36.761244]
+            }
+        ]
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>مثال پاسخ دریافت استان‌ها</summary>
+
+```json
+{
+    "status": 1,
+    "data": {
+        "name": "مازندران",
+        "cities": [
+            { "name": "آمل", "type": "city" },
+            { "name": "بابل", "type": "city" }
+        ]
+    }
+}
+```
